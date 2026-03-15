@@ -7,6 +7,8 @@ function App() {
   const [activeSection, setActiveSection] = useState("home");
 const [hovered, setHovered] = useState(false);
 const [selectedService, setSelectedService] = useState(null);
+const [menuOpen, setMenuOpen] = useState(false);
+const isMobile = window.innerWidth < 768;
   const services = [
   {
     title: "Standard Cleaning",
@@ -98,35 +100,35 @@ const fadeStyle = `
   style={{
     display: "flex",
     justifyContent: "space-between",
-    padding: window.innerWidth < 768 ? "14px 12px" : "18px 60px",
-    borderBottom: "1px solid #111",
-    backgroundColor: "#000",
-    alignItems: "center",
-    flexWrap: "nowrap",
-    overflowX: "auto",
+   padding: isMobile ? "14px 16px" : "18px 60px",
+borderBottom: "1px solid #111",
+backgroundColor: "#000",
+alignItems: "center",
+position: "relative",
   }}
 >
  <img
   src={logo}
   alt="Listro Logo"
   style={{
-    width: "160px",
-    height: "85px",
+    width: isMobile ? "100px" : "160px",
+    height: isMobile ? "55px" : "85px",
     objectFit: "contain",
     display: "block",
   }}
 />
 
-       <div
-  style={{
-    display: "flex",
-    gap: "20px",
-    overflowX: "auto",
-    whiteSpace: "nowrap",
-    scrollbarWidth: "none",
-    msOverflowStyle: "none",
-  }}
->
+      {!isMobile && (
+  <div
+    style={{
+     display: isMobile ? "none" : "flex",
+      gap: "20px",
+      overflowX: "auto",
+      whiteSpace: "nowrap",
+      scrollbarWidth: "none",
+      msOverflowStyle: "none",
+    }}
+  >
          <span
   onClick={() => setActiveSection("home")}
   style={{
@@ -191,10 +193,26 @@ const fadeStyle = `
 >
   Contact
 </span>
-        </div>
-      </div>
+    
+    </div>
+)}
+{isMobile && (
+  <div
+    onClick={() => setMenuOpen(!menuOpen)}
+    style={{
+      color: "#d4af37",
+      fontSize: "28px",
+      cursor: "pointer",
+      userSelect: "none",
+      padding: "8px",
+    }}
+  >
+    ☰
+  </div>
+)}
+</div>
 
-      {/* HOME */}
+{/* HOME */}
       {activeSection === "home" && (
         <div
           style={{
