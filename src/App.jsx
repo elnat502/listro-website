@@ -681,10 +681,15 @@ onMouseLeave={(e) => {
   boxShadow: "0 0 15px rgba(212,175,55,0.08)",
   transition: "0.3s",
   cursor: "pointer",
-  minHeight: "160px",
+  width: "150px",
+  height: "220px",
+  minWidth: "150px",
+  maxWidth: "150px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
+  alignItems: "center",
+  boxSizing: "border-box",
 }}
               >
               <div style={{ fontSize: "42px", marginBottom: "15px" }}>
