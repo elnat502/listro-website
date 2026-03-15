@@ -655,9 +655,10 @@ href="https://wa.me/971506221783?text=Hello%20Listro,%0A%0AI%20would%20like%20to
 
           <div
             style={{
-              display: "grid",
-             gridTemplateColumns: "repeat(3, 1fr)",
-              gap: "20px",
+           display: "grid",
+gridTemplateColumns: window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
+gap: "20px",
+justifyItems: "center", 
             }}
           >
             {shoeTypes.map((item, index) => (
