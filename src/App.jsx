@@ -94,15 +94,18 @@ const fadeStyle = `
     >
       <style>{fadeStyle}</style>
       {/* NAVBAR */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-         padding: "18px 60px",
-          borderBottom: "1px solid #111",
-          backgroundColor: "#000",
-        }}
-      >
+     <div
+  style={{
+    display: "flex",
+    justifyContent: "space-between",
+    padding: window.innerWidth < 768 ? "14px 12px" : "18px 60px",
+    borderBottom: "1px solid #111",
+    backgroundColor: "#000",
+    alignItems: "center",
+    flexWrap: "nowrap",
+    overflowX: "auto",
+  }}
+>
  <img
   src={logo}
   alt="Listro Logo"
@@ -114,7 +117,16 @@ const fadeStyle = `
   }}
 />
 
-        <div style={{ display: "flex", gap: "30px" }}>
+       <div
+  style={{
+    display: "flex",
+    gap: "20px",
+    overflowX: "auto",
+    whiteSpace: "nowrap",
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+  }}
+>
          <span
   onClick={() => setActiveSection("home")}
   style={{
@@ -402,13 +414,14 @@ href="https://wa.me/971506221783?text=Hello%20Listro,%0A%0AI%20would%20like%20to
       <img
         src={beforeImage}
         alt="Before cleaning"
-        style={{
-          width: "100%",
-          borderRadius: "15px",
-          marginBottom: "15px",
-          height: "220px",
-          objectFit: "cover",
-        }}
+       style={{
+  width: "100%",
+  maxWidth: "220px",
+  height: "auto",
+  borderRadius: "15px",
+  marginBottom: "15px",
+  objectFit: "contain",
+}}
       />
       <p style={{ color: "#d4af37", fontWeight: "bold" }}>Before</p>
     </div>
@@ -423,11 +436,14 @@ href="https://wa.me/971506221783?text=Hello%20Listro,%0A%0AI%20would%20like%20to
       <img
         src={afterImage}
         alt="After cleaning"
-        style={{
-          width: "100%",
-          borderRadius: "15px",
-          marginBottom: "15px",
-        }}
+       style={{
+  width: "100%",
+  maxWidth: "220px",
+  height: "auto",
+  borderRadius: "15px",
+  marginBottom: "15px",
+  objectFit: "contain",
+}}
       />
       <p style={{ color: "#d4af37", fontWeight: "bold" }}>After</p>
         </div>
