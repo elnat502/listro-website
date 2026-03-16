@@ -12,7 +12,7 @@ export default function HomeSection({
   return (
     <div
       style={{
-        padding: "80px 60px",
+        padding: isMobile ? "50px 20px" : "80px 60px",
         animation: "fadeSlide 0.5s ease",
       }}
     >
@@ -26,15 +26,15 @@ export default function HomeSection({
         }}
       >
         <div style={{ maxWidth: "550px" }}>
-          <h1 style={{ fontSize: "72px", color: "#d4af37" }}>Listro</h1>
+          <h1 style={{ fontSize: isMobile ? "54px" : "72px", color: "#d4af37" }}>Listro</h1>
 
-          <h2 style={{ fontSize: "42px", color: "#fff" }}>
+         <h2 style={{ fontSize: isMobile ? "24px" : "42px", color: "#fff" }}>
             Premium Shoe Care in UAE
           </h2>
 
           <p
             style={{
-              fontSize: "22px",
+              fontSize: isMobile ? "16px" : "22px",
               lineHeight: "1.8",
               color: "#ccc",
             }}

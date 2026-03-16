@@ -24,22 +24,24 @@ export default function Navbar({
         src={logo}
         alt="Listro Logo"
         style={{
-          width: isMobile ? "100px" : "160px",
-          height: isMobile ? "55px" : "85px",
+          width: isMobile ? "120px" : "160px",
+          height: isMobile ? "65px" : "85px",
           objectFit: "contain",
         }}
       />
 
       {/* Navigation */}
       <div
-        style={{
-          display: "flex",
-          gap: isMobile ? "12px" : "22px",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          fontSize: isMobile ? "14px" : "18px",
-        }}
-      >
+  style={{
+    display: "flex",
+    gap: isMobile ? "10px" : "22px",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    fontSize: isMobile ? "13px" : "18px",
+    maxWidth: isMobile ? "260px" : "none",
+    lineHeight: "1.8",
+  }}
+>
         <span
           onClick={() => setActiveSection("home")}
           style={{
