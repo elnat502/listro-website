@@ -1,0 +1,65 @@
+import React from "react";
+
+export default function ContactSection() {
+  return (
+    <div
+      style={{
+        padding: "70px 40px",
+        animation: "fadeSlide 0.5s ease",
+        textAlign: "center",
+        backgroundColor: "#050505",
+        borderTop: "1px solid #222",
+      }}
+    >
+      <h2
+        style={{
+          color: "#d4af37",
+          fontSize: "42px",
+          marginBottom: "25px",
+        }}
+      >
+        Contact Us
+      </h2>
+
+      <p
+        style={{
+          color: "#ccc",
+          fontSize: "20px",
+          marginBottom: "14px",
+        }}
+      >
+        📍 Dubai, UAE
+      </p>
+
+      <p
+        style={{
+          color: "#ccc",
+          fontSize: "18px",
+          marginBottom: "14px",
+        }}
+      >
+        📲 WhatsApp Booking Available
+      </p>
+
+      <p
+        style={{
+          color: "#ccc",
+          fontSize: "18px",
+          marginBottom: "14px",
+        }}
+      >
+        ⏰ Daily Service Hours: 9:00 AM – 10:00 PM
+      </p>
+
+      <p
+        style={{
+          color: "#777",
+          fontSize: "15px",
+          marginTop: "20px",
+        }}
+      >
+        Fast pickup response across UAE
+      </p>
+    </div>
+  );
+}
