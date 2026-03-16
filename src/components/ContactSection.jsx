@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaMapMarkerAlt, FaWhatsapp, FaClock } from "react-icons/fa";
 export default function ContactSection() {
   return (
     <div
@@ -21,35 +21,50 @@ export default function ContactSection() {
         Contact Us
       </h2>
 
-      <p
-        style={{
-          color: "#ccc",
-          fontSize: "20px",
-          marginBottom: "14px",
-        }}
-      >
-        📍 Dubai, UAE
-      </p>
+    <p
+  style={{
+    color: "#ccc",
+    fontSize: "18px",
+    marginBottom: "14px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+  }}
+>
+  <FaMapMarkerAlt color="#d4af37" size={18} />
+  Dubai, UAE
+</p>
 
-      <p
-        style={{
-          color: "#ccc",
-          fontSize: "18px",
-          marginBottom: "14px",
-        }}
-      >
-        📲 WhatsApp Booking Available
-      </p>
+<p
+  style={{
+    color: "#ccc",
+    fontSize: "18px",
+    marginBottom: "14px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+  }}
+>
+  <FaWhatsapp color="#d4af37" size={18} />
+  WhatsApp Booking Available
+</p>
 
-      <p
-        style={{
-          color: "#ccc",
-          fontSize: "18px",
-          marginBottom: "14px",
-        }}
-      >
-        ⏰ Daily Service Hours: 9:00 AM – 10:00 PM
-      </p>
+<p
+  style={{
+    color: "#ccc",
+    fontSize: "18px",
+    marginBottom: "14px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "10px",
+  }}
+>
+  <FaClock color="#d4af37" size={18} />
+  Daily Service Hours: 9:00 AM – 10:00 PM
+</p>
 
       <p
         style={{
