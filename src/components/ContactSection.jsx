@@ -60,9 +60,10 @@ export default function ContactSection() {
     alignItems: "center",
     justifyContent: "center",
     gap: "10px",
+    lineHeight: "1.4",
   }}
 >
-  <FaClock color="#d4af37" size={18} />
+ <FaClock color="#d4af37" size={18} style={{ marginTop: "-2px" }} />
   Daily Service Hours: 9:00 AM – 10:00 PM
 </p>
 
