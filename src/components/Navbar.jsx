@@ -10,12 +10,12 @@ export default function Navbar({
     <div
       style={{
         display: "flex",
-        justifyContent: "space-between",
-        padding: isMobile ? "14px 16px" : "18px 60px",
+       justifyContent: isMobile ? "center" : "space-between",
+       padding: isMobile ? "18px 16px" : "18px 60px",
         borderBottom: "1px solid #111",
         backgroundColor: "#000",
         alignItems: "center",
-        flexDirection: isMobile ? "column" : "row",
+        flexDirection: "column",
         gap: isMobile ? "14px" : "0",
       }}
     >
@@ -24,10 +24,13 @@ export default function Navbar({
         src={logo}
         alt="Listro Logo"
         style={{
-          width: isMobile ? "120px" : "160px",
-          height: isMobile ? "65px" : "85px",
-          objectFit: "contain",
-        }}
+  width: isMobile ? "155px" : "160px",
+  height: "auto",
+  maxWidth: "none",
+  display: "block",
+  flexShrink: 0,
+  objectFit: "contain",
+}}
       />
 
       {/* Navigation */}
@@ -37,7 +40,9 @@ export default function Navbar({
     gap: isMobile ? "10px" : "22px",
     flexWrap: "wrap",
     justifyContent: "center",
-    fontSize: isMobile ? "13px" : "18px",
+    fontSize: isMobile ? "17px" : "18px",
+    fontWeight: "600",
+    letterSpacing: "0.3px",
     maxWidth: isMobile ? "260px" : "none",
     lineHeight: "1.8",
   }}

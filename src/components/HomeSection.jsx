@@ -12,7 +12,7 @@ export default function HomeSection({
   return (
     <div
       style={{
-        padding: isMobile ? "50px 20px" : "80px 60px",
+        padding: isMobile ? "35px 20px" : "80px 60px",
         animation: "fadeSlide 0.5s ease",
       }}
     >

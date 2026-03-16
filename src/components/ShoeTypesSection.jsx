@@ -1,6 +1,15 @@
 import React from "react";
 
+import sneaker from "../assets/sneaker.png";
+import leather from "../assets/leather.png";
+import boots from "../assets/boots.png";
+import heels from "../assets/heels.png";
+import kids from "../assets/kids.png?v=2";
+import sports from "../assets/sports.png?v=2";
+
 export default function ShoeTypesSection({ shoeTypes }) {
+  const shoeImages = [sneaker, leather, boots, heels, kids, sports];
+
   return (
     <div
       style={{
@@ -43,14 +52,14 @@ export default function ShoeTypesSection({ shoeTypes }) {
             }}
             style={{
               backgroundColor: "#111",
-              padding: "28px",
+              padding: "24px",
               borderRadius: "18px",
               textAlign: "center",
               boxShadow: "0 0 15px rgba(212,175,55,0.08)",
               transition: "0.3s",
               cursor: "pointer",
               width: "150px",
-              height: "220px",
+             height: window.innerWidth < 768 ? "180px" : "210px",
               minWidth: "150px",
               maxWidth: "150px",
               display: "flex",
@@ -60,19 +69,21 @@ export default function ShoeTypesSection({ shoeTypes }) {
               boxSizing: "border-box",
             }}
           >
-            <div style={{ fontSize: "42px", marginBottom: "15px" }}>
-              {index === 0 && "👟"}
-              {index === 1 && "👞"}
-              {index === 2 && "🥾"}
-              {index === 3 && "👠"}
-              {index === 4 && "🧒"}
-              {index === 5 && "⚽"}
-            </div>
+            <img
+              src={shoeImages[index]}
+              alt={item}
+              style={{
+               width: window.innerWidth < 768 ? "55px" : "70px",
+               height: window.innerWidth < 768 ? "55px" : "70px",
+                objectFit: "contain",
+                marginBottom: "15px",
+              }}
+            />
 
             <div
               style={{
                 color: "#fff",
-                fontSize: "24px",
+                fontSize: window.innerWidth < 768 ? "18px" : "24px",
                 fontWeight: "600",
               }}
             >
