@@ -51,22 +51,28 @@ export default function ContactSection() {
   WhatsApp Booking Available
 </p>
 
-<p
+<div
   style={{
-    color: "#ccc",
-    fontSize: "18px",
-    marginBottom: "14px",
     display: "flex",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "flex-start",
     gap: "10px",
-    lineHeight: "1.4",
+    maxWidth: "320px",
+    margin: "0 auto 14px auto",
   }}
 >
- <FaClock color="#d4af37" size={18} style={{ marginTop: "-2px" }} />
-  Daily Service Hours: 9:00 AM – 10:00 PM
-</p>
-
+  <FaClock color="#d4af37" size={18} style={{ marginTop: "5px", flexShrink: 0 }} />
+  <span
+    style={{
+      color: "#ccc",
+      fontSize: "18px",
+      lineHeight: "1.5",
+      textAlign: "center",
+    }}
+  >
+    Daily Service Hours: 9:00 AM – 10:00 PM
+  </span>
+</div>
       <p
         style={{
           color: "#777",
