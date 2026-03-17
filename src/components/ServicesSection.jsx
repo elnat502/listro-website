@@ -18,7 +18,7 @@ export default function ServicesSection({
             textAlign: "center",
             color: "#d4af37",
             fontSize: "42px",
-            marginBottom: "50px",
+            marginBottom: "60px",
           }}
         >
           Our Services
@@ -26,10 +26,13 @@ export default function ServicesSection({
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-            gap: "25px",
-          }}
+  display: "grid",
+ gridTemplateColumns: "repeat(3, minmax(260px, 360px))",
+justifyContent: "center",
+  gap: "28px",
+  maxWidth: "1400px",
+  margin: "0 auto",
+}}
         >
           {services.map((item, index) => (
             <div
@@ -50,10 +53,10 @@ export default function ServicesSection({
                 padding: "30px",
                 borderRadius: "18px",
                 textAlign: "center",
-                boxShadow: "0 0 20px rgba(212,175,55,0.08)",
+               boxShadow: "0 14px 35px rgba(212,175,55,0.15)",
                 transition: "0.3s",
                 cursor: "pointer",
-                minHeight: "180px",
+                minHeight: "260px",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",

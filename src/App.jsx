@@ -94,13 +94,16 @@ const fadeStyle = `
 `;
   return (
     <div
-      style={{
-        backgroundColor: "#000",
-        color: "#fff",
-        fontFamily: "Arial",
-        minHeight: "100vh",
-      }}
-    >
+  style={{
+    backgroundColor: "#000",
+    color: "#fff",
+    fontFamily: "Arial",
+    minHeight: "100vh",
+    width: "100%",
+    margin: "0",
+    padding: "0",
+  }}
+>
       <style>{fadeStyle}</style>
       {/* NAVBAR */}
     <Navbar
@@ -147,7 +150,10 @@ const fadeStyle = `
 {activeSection === "contact" && <ContactSection />}
 
       {/* FOOTER */}
-      <FooterSection />
+      <FooterSection
+  isMobile={isMobile}
+  setActiveSection={setActiveSection}
+/>
     </div>
   );
 }
