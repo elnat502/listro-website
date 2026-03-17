@@ -137,7 +137,7 @@ export default function Navbar({
       padding: "20px 24px",
       display: "flex",
       flexDirection: "column",
-      position: "absolute",
+      position: "fixed",
       top: "100%",
       left: 0,
       width: "100%",
