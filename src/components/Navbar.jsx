@@ -130,15 +130,21 @@ export default function Navbar({
       </div>
 
       {/* Premium Mobile Menu */}
-      {isMobile && menuOpen && (
-        <div
-          style={{
-            backgroundColor: "#000",
-            padding: "20px 24px",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
+     {isMobile && menuOpen && (
+  <div
+    style={{
+      backgroundColor: "#000",
+      padding: "20px 24px",
+      display: "flex",
+      flexDirection: "column",
+      position: "absolute",
+      top: "100%",
+      left: 0,
+      width: "100%",
+      zIndex: 999,
+      boxShadow: "0 8px 30px rgba(0,0,0,0.45)",
+    }}
+  >
           <div onClick={() => { setActiveSection("home"); setMenuOpen(false); }} style={menuItemStyle("home")}>
             Home
           </div>
