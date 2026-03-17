@@ -42,6 +42,8 @@ export default function Navbar({
               color: "#fff",
               fontSize: "28px",
               cursor: "pointer",
+               zIndex: 1001,
+               position: "relative",
             }}
           >
             ☰
