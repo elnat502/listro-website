@@ -11,7 +11,7 @@ export default function Navbar({
   const menuItemStyle = (section) => ({
     cursor: "pointer",
     color: activeSection === section ? "#d4af37" : "#fff",
-    padding: "14px 0",
+    padding: "16px 0",
     borderBottom: "1px solid #222",
     fontSize: "18px",
     letterSpacing: "1px",
@@ -24,7 +24,7 @@ export default function Navbar({
       <div
         style={{
           display: "flex",
-          justifyContent: isMobile ? "space-between" : "space-between",
+          justifyContent: "space-between",
           padding: isMobile ? "18px 16px" : "18px 60px",
           borderBottom: "1px solid #111",
           backgroundColor: "#000",
@@ -32,22 +32,28 @@ export default function Navbar({
           flexDirection: isMobile ? "row" : "column",
           gap: isMobile ? "0" : "14px",
           position: "relative",
+          zIndex: 1000,
         }}
       >
         {/* Mobile Hamburger */}
-        {isMobile && (
+        {isMobile ? (
           <div
-            onClick={() => setMenuOpen(!menuOpen)}
+            onClick={() => setMenuOpen((prev) => !prev)}
             style={{
               color: "#fff",
               fontSize: "28px",
               cursor: "pointer",
-               zIndex: 1001,
-               position: "relative",
+              zIndex: 1002,
+              position: "relative",
+              width: "32px",
+              textAlign: "left",
+              userSelect: "none",
             }}
           >
-            ☰
+            {menuOpen ? "✕" : "☰"}
           </div>
+        ) : (
+          <div style={{ display: "none" }} />
         )}
 
         {/* Logo */}
@@ -63,6 +69,13 @@ export default function Navbar({
             objectFit: "contain",
           }}
         />
+
+        {/* Mobile right spacer for balance */}
+        {isMobile ? (
+          <div style={{ width: "32px" }} />
+        ) : (
+          <div style={{ display: "none" }} />
+        )}
 
         {/* Desktop Navigation */}
         {!isMobile && (
@@ -132,47 +145,80 @@ export default function Navbar({
       </div>
 
       {/* Premium Mobile Menu */}
-     {isMobile && menuOpen && (
-  <div
-    style={{
-      backgroundColor: "#000",
-      padding: "20px 24px",
-      display: "flex",
-      flexDirection: "column",
-      position: "fixed",
-      top: "100%",
-      left: 0,
-      width: "100%",
-      zIndex: 999,
-      boxShadow: "0 8px 30px rgba(0,0,0,0.45)",
-    }}
-  >
-          <div onClick={() => { setActiveSection("home"); setMenuOpen(false); }} style={menuItemStyle("home")}>
+      {isMobile && menuOpen && (
+        <div
+          style={{
+            backgroundColor: "#000",
+            padding: "20px 24px 28px",
+            display: "flex",
+            flexDirection: "column",
+            position: "fixed",
+            top: "92px",
+            left: 0,
+            width: "100%",
+            zIndex: 1001,
+            boxShadow: "0 8px 30px rgba(0,0,0,0.45)",
+            minHeight: "calc(100vh - 92px)",
+            overflowY: "auto",
+          }}
+        >
+          <div
+            onClick={() => {
+              setActiveSection("home");
+              setMenuOpen(false);
+            }}
+            style={menuItemStyle("home")}
+          >
             Home
           </div>
 
-          <div onClick={() => { setActiveSection("services"); setMenuOpen(false); }} style={menuItemStyle("services")}>
+          <div
+            onClick={() => {
+              setActiveSection("services");
+              setMenuOpen(false);
+            }}
+            style={menuItemStyle("services")}
+          >
             Services
           </div>
 
-          <div onClick={() => { setActiveSection("types"); setMenuOpen(false); }} style={menuItemStyle("types")}>
+          <div
+            onClick={() => {
+              setActiveSection("types");
+              setMenuOpen(false);
+            }}
+            style={menuItemStyle("types")}
+          >
             Shoe Types
           </div>
 
-          <div onClick={() => { setActiveSection("mode"); setMenuOpen(false); }} style={menuItemStyle("mode")}>
+          <div
+            onClick={() => {
+              setActiveSection("mode");
+              setMenuOpen(false);
+            }}
+            style={menuItemStyle("mode")}
+          >
             Service Mode
           </div>
 
-          <div onClick={() => { setActiveSection("contact"); setMenuOpen(false); }} style={menuItemStyle("contact")}>
+          <div
+            onClick={() => {
+              setActiveSection("contact");
+              setMenuOpen(false);
+            }}
+            style={menuItemStyle("contact")}
+          >
             Contact
           </div>
 
           <div
             style={{
-              padding: "14px 0",
+              padding: "16px 0",
               color: "#888",
               fontSize: "18px",
               letterSpacing: "1px",
+              textAlign: "left",
             }}
           >
             About Listro
