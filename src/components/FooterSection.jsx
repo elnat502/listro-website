@@ -231,7 +231,7 @@ export default function FooterSection({ isMobile, setActiveSection }) {
   style={{
   position: "fixed",
   right: "32px",
-  bottom: "24px",
+  bottom: "40px",
   width: "58px",
   height: "58px",
   borderRadius: "50%",
