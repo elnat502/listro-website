@@ -5,6 +5,7 @@ export default function ServicesSection({
   setSelectedService,
   selectedService,
 }) {
+  const isMobile = window.innerWidth < 768;
   return (
     <>
       <div
@@ -25,10 +26,12 @@ export default function ServicesSection({
         </h2>
 
         <div
-          style={{
+         style={{
   display: "grid",
- gridTemplateColumns: "repeat(3, minmax(260px, 360px))",
-justifyContent: "center",
+  gridTemplateColumns: isMobile
+    ? "1fr"
+    : "repeat(3, minmax(260px, 360px))",
+  justifyContent: "center",
   gap: "28px",
   maxWidth: "1400px",
   margin: "0 auto",
