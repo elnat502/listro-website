@@ -98,6 +98,25 @@ export default function HomeSection({
           >
             Fast response • Pickup available across UAE
           </p>
+          <p
+  style={{
+    marginTop: "8px",
+    color: "#999",
+    fontSize: "15px",
+  }}
+>
+  Trusted care for sneakers, leather and premium footwear.
+</p>
+<p
+  style={{
+    marginTop: "4px",
+    color: "#d4af37",
+    fontSize: "14px",
+    fontWeight: "500",
+  }}
+>
+  Pay after service completion
+</p>
         </div>
 
         <img src={shoe} alt="shoe" style={{ width: "420px" }} />
@@ -208,9 +227,19 @@ export default function HomeSection({
               marginBottom: "50px",
             }}
           >
-            See how Listro restores shoes professionally.
+           See how Listro restores premium footwear professionally.
           </p>
-
+<p
+  style={{
+    color: "#d4af37",
+    fontSize: "15px",
+    fontWeight:"bold",
+    marginTop: "8px",
+    marginBottom: "20px",
+  }}
+>
+Real before / after restoration by Listro
+</p>
           <div
             style={{
               display: "grid",

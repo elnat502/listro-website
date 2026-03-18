@@ -3,7 +3,7 @@ import React from "react";
 export default function FooterSection({ isMobile, setActiveSection }) {
   const openWhatsApp = () => {
     window.open(
-      "https://wa.me/971506221783?text=Hello%20Listro,%20I%20would%20like%20to%20book%20a%20shoe%20cleaning%20service.%20Please%20share%20available%20pickup%20timing",
+      "https://wa.me/971506221783?text=Hello%20Listro,%20I%20would%20like%20to%20book%20a%20shoe%20cleaning%20service.%20Please%20share%20pickup%20time%20and%20pricing",
       "_blank"
     );
   };
