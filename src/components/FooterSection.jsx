@@ -82,16 +82,19 @@ export default function FooterSection({ isMobile, setActiveSection }) {
               📍 UAE
             </p>
 
-            <p
-              style={{
-                color: "#888",
-                fontSize: "15px",
-                lineHeight: "1.8",
-                marginBottom: "8px",
-              }}
-            >
-              📞 +971 50 622 1783
-            </p>
+            <a
+  href="tel:+971506221783"
+  style={{
+    color: "#888",
+    fontSize: "15px",
+    lineHeight: "1.8",
+    marginBottom: "8px",
+    textDecoration: "none",
+    display: "block",
+  }}
+>
+  📞 +971 50 622 1783
+</a>
 
             <p
               style={{

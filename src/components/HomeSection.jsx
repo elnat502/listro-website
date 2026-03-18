@@ -12,7 +12,7 @@ export default function HomeSection({
   return (
     <div
       style={{
-       padding: isMobile ? "35px 20px" : "80px 120px",
+      padding: isMobile ? "35px 20px" : "40px 120px",
         animation: "fadeSlide 0.5s ease",
       }}
     >
@@ -29,7 +29,7 @@ export default function HomeSection({
           <h1 style={{ fontSize: isMobile ? "54px" : "72px", color: "#d4af37" }}>Listro</h1>
 
          <h2 style={{ fontSize: isMobile ? "24px" : "42px", color: "#fff" }}>
-            Premium Shoe Care in UAE
+           Luxury Shoe Care Across UAE
           </h2>
 
           <p
