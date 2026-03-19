@@ -29,13 +29,17 @@ export default function ShoeTypesSection({ shoeTypes }) {
       </h2>
 
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns:
-            window.innerWidth < 768 ? "repeat(2, 1fr)" : "repeat(3, 1fr)",
-          gap: "20px",
-          justifyItems: "center",
-        }}
+       style={{
+  display: "grid",
+  gridTemplateColumns:
+    window.innerWidth < 768 ? "repeat(2, 160px)" : "repeat(3, 1fr)",
+  gap: window.innerWidth < 768 ? "18px" : "20px",
+  justifyContent: "center",
+  justifyItems: "center",
+  maxWidth: window.innerWidth < 768 ? "360px" : "1000px",
+  margin: "0 auto",
+  width: "100%",
+}}
       >
         {shoeTypes.map((item, index) => (
           <div
