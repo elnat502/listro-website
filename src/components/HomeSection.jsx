@@ -42,7 +42,7 @@ export default function HomeSection({
               color: "#ccc",
             }}
           >
-            Professional sneaker, leather, suede and premium footwear care —
+            Professional sneaker, leather, suede and premium footwear care 
             pickup and delivery available.
           </p>
 
