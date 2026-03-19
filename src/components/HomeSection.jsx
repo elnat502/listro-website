@@ -19,11 +19,14 @@ export default function HomeSection({
       {/* HERO */}
       <div
         style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  flexWrap: "wrap",
+  overflow: "hidden",
+  width: "100%",
+  boxSizing: "border-box",
+}}
       >
         <div style={{ maxWidth: "650px" }}>
           <h1 style={{ fontSize: isMobile ? "54px" : "72px", color: "#d4af37" }}>Listro</h1>
