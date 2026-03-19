@@ -233,8 +233,8 @@ export default function FooterSection({ isMobile, setActiveSection }) {
   aria-label="Chat on WhatsApp"
   style={{
   position: "fixed",
-  right: "32px",
-  bottom: "40px",
+  right: "18px",
+  bottom: "clamp(80px, 10vh, 110px)",
   width: "58px",
   height: "58px",
   borderRadius: "50%",
