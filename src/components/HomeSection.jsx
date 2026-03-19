@@ -241,12 +241,19 @@ export default function HomeSection({
 Real before / after restoration by Listro
 </p>
           <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit,minmax(240px,420px))",
-              gap: "30px",
-              justifyContent: "center",
-            }}
+           style={{
+  display: "grid",
+  gridTemplateColumns: isMobile
+    ? "repeat(2, minmax(130px, 1fr))"
+    : "repeat(auto-fit, minmax(240px, 420px))",
+  gap: isMobile ? "18px" : "30px",
+  justifyContent: "center",
+  width: "100%",
+  maxWidth: isMobile ? "100%" : "1000px",
+  margin: "0 auto",
+  padding: isMobile ? "0 16px" : "0",
+  boxSizing: "border-box",
+}}
           >
             <div
               style={{
