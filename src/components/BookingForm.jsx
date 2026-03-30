@@ -48,7 +48,8 @@ Pickup Location:
 Tap to open map
 ${location}
 
-- Estimated Price: ${getPrice()} AED
+Final Price: ${getPrice()} AED
+Pickup & delivery included
 
 Pay after service
 Fast pickup & delivery
