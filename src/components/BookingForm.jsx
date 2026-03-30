@@ -77,7 +77,8 @@ const getPrice = () => {
   if (service === "Standard Cleaning") base = 19;
   if (service === "Whitening") base = 15;
 
-  return base * quantity;
+ const deliveryFee = 20;
+return base * quantity + deliveryFee;
 };
   return (
     <div
@@ -208,6 +209,16 @@ const getPrice = () => {
   >
     {getPrice()} AED
   </div>
+<div
+  style={{
+    color: "#aaa",
+    fontSize: "13px",
+    marginTop: "5px",
+    textAlign: "center"
+  }}
+>
+ Pickup & delivery included
+</div>
 
   <div
     style={{
