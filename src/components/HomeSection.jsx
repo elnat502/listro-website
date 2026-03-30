@@ -1,5 +1,5 @@
 import React from "react";
-
+import BookingForm from "./BookingForm";
 export default function HomeSection({
   isMobile,
   hovered,
@@ -120,6 +120,8 @@ export default function HomeSection({
 >
   Pay after service completion
 </p>
+{/* 🔥 QUICK BOOKING FORM */}
+<BookingForm />
         </div>
 
         <img src={shoe} alt="shoe" style={{ width: "420px" }} />

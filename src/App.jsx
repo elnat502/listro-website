@@ -1,3 +1,4 @@
+import BookingForm from "./components/BookingForm";
 import { useState } from "react";
 import shoe from "./assets/shoe.png";
 import logo from "./assets/splash-icon.png";
